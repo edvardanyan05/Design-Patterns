@@ -38,13 +38,10 @@ private:
     FeedingCostCalculator costCalculator_;
 
 public:
-    void exportToFile(const Animal& animal, const std::string& filename) const {
-        std::ofstream file(filename);
-        if (file.is_open()) {
-            file << "=== HEALTH REPORT ===\n";
-            file << "Animal: " << animal.getName() << " (" << animal.getSpecies() << ")\n";
-            file << "Weight: " << animal.getWeight() << " kg\n";
-            file << "Daily Food Cost: $" << costCalculator_.calculateDailyCost(animal) << "\n";
-        }
+    void exportToFile(const Animal& animal) const {
+        std::cout << "=== HEALTH REPORT ===\n";
+        std::cout << "Animal: " << animal.getName() << " (" << animal.getSpecies() << ")\n";
+        std::cout << "Weight: " << animal.getWeight() << " kg\n";
+        std::cout << "Daily Food Cost: $" << costCalculator_.calculateDailyCost(animal) << "\n";
     }
 };

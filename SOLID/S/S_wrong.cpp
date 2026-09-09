@@ -27,13 +27,10 @@ public:
     }
 
     // Responsibility 3: Reporting & File Formatting
-    void exportHealthReportToFile(const std::string& filename) const {
-        std::ofstream file(filename);
-        if (file.is_open()) {
-            file << "=== HEALTH REPORT ===\n";
-            file << "Animal: " << name << " (" << species << ")\n";
-            file << "Weight: " << weightKg << " kg\n";
-            file << "Daily Cost: $" << calculateDailyFoodCost() << "\n";
-        }
+    void exportHealthReportToFile() const {
+        std::cout << "=== HEALTH REPORT ===\n";
+        std::cout << "Animal: " << name << " (" << species << ")\n";
+        std::cout << "Weight: " << weightKg << " kg\n";
+        std::cout << "Daily Cost: $" << calculateDailyFoodCost() << "\n";
     }
 };
