@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <fstream>
 #include <memory>
 
 // 1. Biological/Domain Entity (Only holds animal identity and state)
@@ -38,7 +37,7 @@ private:
     FeedingCostCalculator costCalculator_;
 
 public:
-    void exportToFile(const Animal& animal) const {
+    void printInfo(const Animal& animal) const {
         std::cout << "=== HEALTH REPORT ===\n";
         std::cout << "Animal: " << animal.getName() << " (" << animal.getSpecies() << ")\n";
         std::cout << "Weight: " << animal.getWeight() << " kg\n";

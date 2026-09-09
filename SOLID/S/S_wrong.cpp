@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <fstream>
 
 class Animal {
 private:
@@ -27,7 +26,7 @@ public:
     }
 
     // Responsibility 3: Reporting & File Formatting
-    void exportHealthReportToFile() const {
+    void printInfo() const {
         std::cout << "=== HEALTH REPORT ===\n";
         std::cout << "Animal: " << name << " (" << species << ")\n";
         std::cout << "Weight: " << weightKg << " kg\n";
